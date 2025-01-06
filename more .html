@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="form.css" type="text/css">
+    
+    <style>
+        body {
+            font-family: "Parkinsans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+			background-image:url('image/purple.jpeg');
+			background-attachment:fixed;
+			background-repeat:no-repeat;
+			background-size:cover;
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .row > .column {
+            padding: 0 8px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .column {
+            float: left;
+            width: 25%;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+        }
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1200px;
+        }
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #999;
+        }
+        .mySlides {
+            display: none;
+        }
+        .cursor {
+            cursor: pointer;
+        }
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-size: 20px;
+            transition: 0.6s ease;
+        }
+        .next {
+            right: 0;
+        }
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .caption-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 16px;
+            color: white;
+        }
+        img.hover-shadow {
+            transition: 0.3s;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        marquee {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        table tr td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body align="center">
+    <marquee width="900" scrolldelay="90">˚ ༘♡ ⋆｡˚Welcome To My World˚ ༘♡ ⋆｡˚</marquee>
+    
+    <table border="0" align="center" bgcolor="#d2b4de">
+        <tr height="50">
+            <td><a href="index.html">Home</a></td>
+            <td><a href="Education1.html">Education</a></td>
+            <td><a href="Gallery.html">Gallery</a></td>
+            <td><a href="more .html">More</a></td>
+        </tr>
+        <tr>
+                        <td width="450" align="center"><img src="image/WHATSAPP QR.png" width="300"></td>
+                        <td width="300" align="center" colspan="2">
+						<form name="form1" method="post" action="mailto:nurindhaniyah153@gmail.com">
+						<p>Name: <input type="text" size="35" rows="20" name="name" align="left"></p>
+						<p>Phone: <input type="text" size="25" name="phone" align="left"></p>
+						<p>Subject: <textarea cols="60" rows="8" name="subject" align="left"></textarea></p>
+						<p><input name="submit" type="submit" value="submit"></p> </td> 
+						<td>&nbsp;</td>
+        </tr>		
+    </table>
+	<td align="center">
+	<marquee>
+        <img align="center" src="image/bat3.gif"  width="150" height="150">
+		<img align="center" src="image/bat3.gif"  width="150" height="150">
+		<img align="center" src="image/bat3.gif"  width="150" height="150">
+    </marquee>		
+   </td>
+    
+</body>
+</html>

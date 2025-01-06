@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <style>
+        body {
+            font-family: "Parkinsans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+			background-image:url('image/purple2.jpeg');
+			background-attachment:fixed;
+			background-repeat:no-repeat;
+			background-size:cover;
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .row > .column {
+            padding: 0 8px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .column {
+            float: left;
+            width: 25%;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+        }
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1200px;
+        }
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #999;
+        }
+        .mySlides {
+            display: none;
+        }
+        .cursor {
+            cursor: pointer;
+        }
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-size: 20px;
+            transition: 0.6s ease;
+        }
+        .next {
+            right: 0;
+        }
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .caption-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 16px;
+            color: white;
+        }
+        img.hover-shadow {
+            transition: 0.3s;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        marquee {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        table tr td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <marquee width="900" scrolldelay="90">˚ ༘♡ ⋆｡˚Welcome To My World˚ ༘♡ ⋆｡˚</marquee>
+    
+    <table border="0" align="center" bgcolor="#d2b4de" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"">
+        <tr height="50">
+            <td><a href="index.html">Home</a></td>
+            <td><a href="Education1.html">Education</a></td>
+            <td><a href="gallery.html">Gallery</a></td>
+            <td><a href="more.html">More</a></td>
+        </tr>
+        <tr>
+            <td colspan="6" align="center" height="500">
+                <table align="center" border="1">
+                    <tr height="200">
+                        <td width="300"><img src="image/IMG_5889.jpg" width="300"></td>
+                        <td width="300">Hi my name is Nurin Dhaniyah Bt Basri ! I'm  21 years old.I was born in Selangor and currently live in Rawang.Moreover, I am the second child among four siblings. Now,i'm studying at UiTM Kampus Rembau,Negeri Sembilan in Diploma Information Management.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+    <h2 style="text-align:center">Myself</h2>
+    <div class="row">
+        <div class="column">
+            <img src="image/IMG_5663.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="image/IMG_6376.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="image/IMG_0040.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="image/IMG_6745.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides"><img src="image/IMG_5663.jpg" style="width:100%"></div>
+            <div class="mySlides"><img src="image/IMG_6376.jpg" style="width:100%"></div>
+            <div class="mySlides"><img src="image/IMG_0040.jpg" style="width:100%"></div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="caption-container"><p id="caption"></p></div>
+        </div>
+    </div>
+    <p><a href="#top">Jump to top page</a></p>
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
